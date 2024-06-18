@@ -7,7 +7,7 @@
     {
       "type": "Microsoft.KeyVault/vaults",
       "apiVersion": "2021-04-01-preview",
-      "name": "kv-devbox-testing-prod-01",
+      "name": "kv-devbox-prod-01",
       "location": "uksouth",
       "properties": {
           "sku": {
