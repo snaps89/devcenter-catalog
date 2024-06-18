@@ -1,0 +1,5 @@
+name: Prod
+summary: Prod environment
+description: Deploys a prod-testing environment
+runner: ARM
+templatePath: azuredeploy.json

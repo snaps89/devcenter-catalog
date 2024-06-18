@@ -1,0 +1,32 @@
+
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "resources": [
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2020-06-01",
+      "name": "rg-devbox-testing-prod-01",
+      "location": "uksouth",
+      "properties": {}
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults",
+      "apiVersion": "2021-04-01-preview",
+      "name": "kv-devbox-testing-prod-01",
+      "location": "uksouth",
+      "properties": {
+          "sku": {
+              "family": "A",
+              "name": "standard"
+          },
+          "tenantId": "a9c8c301-0787-4d7e-840c-27af9dfa3448",
+          "accessPolicies": []
+      },
+      "dependsOn": [
+          "Microsoft.Resources/resourceGroups/rg-devbox-testing-prod-01"
+      ]
+    }
+  ]
+}
